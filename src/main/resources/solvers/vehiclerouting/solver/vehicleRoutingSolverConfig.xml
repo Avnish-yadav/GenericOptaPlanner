@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+  <!--<environmentMode>FULL_ASSERT</environmentMode>--><!-- To slowly prove there are no bugs in this code -->
+  <!--<moveThreadCount>AUTO</moveThreadCount>--><!-- To solve faster by saturating multiple CPU cores -->
+  .
+  <solutionClass>com.example.optaplanner.generic.domain.VehicleRoutingSolution</solutionClass>
+  <entityClass>com.example.optaplanner.generic.domain.Standstill</entityClass>
+  <entityClass>com.example.optaplanner.generic.domain.Customer</entityClass>
+  <entityClass>com.example.optaplanner.generic.domain.timewindowed.TimeWindowedCustomer</entityClass>
+
+  <!--<scoreDirectorFactory>
+    &lt;!&ndash;<easyScoreCalculatorClass>org.optaplanner.solvers.vehiclerouting.solver.score.VehicleRoutingEasyScoreCalculator</easyScoreCalculatorClass>&ndash;&gt;
+    &lt;!&ndash;<incrementalScoreCalculatorClass>org.optaplanner.solvers.vehiclerouting.solver.score.VehicleRoutingIncrementalScoreCalculator</incrementalScoreCalculatorClass>&ndash;&gt;
+    <scoreDrl>solvers/vehiclerouting/solver/vehicleRoutingScoreRules.drl</scoreDrl>
+    &lt;!&ndash;<assertionScoreDirectorFactory>&ndash;&gt;
+      &lt;!&ndash;<easyScoreCalculatorClass>org.optaplanner.solvers.vehiclerouting.solver.score.VehicleRoutingEasyScoreCalculator</easyScoreCalculatorClass>&ndash;&gt;
+    &lt;!&ndash;</assertionScoreDirectorFactory>&ndash;&gt;
+    <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
+  </scoreDirectorFactory>-->
+
+ <!-- <termination>
+    <minutesSpentLimit>5</minutesSpentLimit>
+  </termination>
+  <constructionHeuristic>
+    <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
+  </constructionHeuristic>
+  <localSearch>
+    <unionMoveSelector>
+      <changeMoveSelector/>
+      <swapMoveSelector/>
+      <subChainChangeMoveSelector>
+        <selectReversingMoveToo>true</selectReversingMoveToo>
+      </subChainChangeMoveSelector>
+      <subChainSwapMoveSelector>
+        <selectReversingMoveToo>true</selectReversingMoveToo>
+      </subChainSwapMoveSelector>
+      &lt;!&ndash; TODO use nearby selection to scale out &ndash;&gt;
+    </unionMoveSelector>
+    <acceptor>
+      <lateAcceptanceSize>200</lateAcceptanceSize>
+    </acceptor>
+    <forager>
+      <acceptedCountLimit>1</acceptedCountLimit>
+    </forager>
+  </localSearch>-->
+</solver>
